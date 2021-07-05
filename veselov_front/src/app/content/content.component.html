@@ -1,0 +1,26 @@
+<div class="content-companies">
+  <div *ngFor="let i of companiesList">
+    <div class="item" (dblclick)="ChooseCompany(i)">
+      <input type="text" value="{{i.comp.name}}" id="input{{i.comp.id}}" disabled>
+      <span style="float: right">
+        <i class="material-icons md-28" (click)="DeleteCompany(i.comp, $event)"> delete </i>
+        <i class="material-icons md-28" (click)="EditCompany(i.comp, $event)"> {{editSave}} </i>
+      </span>
+      <br>
+      <span style="font-size: 18px"> Число работников: {{i.comp.workers.length}} </span>
+    </div>
+
+    <div class="workers" *ngIf="i.view">
+      <a> Работники {{i.comp.name}}: </a> <br><br>
+      <div class="item" *ngFor="let w of i.comp.workers">
+        {{w.name}}
+        <span style="float: right">
+      <i class="material-icons md-28" (click)="DeleteWorker(w)"> delete </i>
+    </span>
+        <br>
+        <span style="font-size: 18px"> Опыт работы: {{w.yearsExperience}} лет </span>
+      </div>
+    </div>
+  </div>
+</div>
+

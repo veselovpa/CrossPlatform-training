@@ -1,0 +1,15 @@
+<div class="auth">
+  <form>
+    <p> {{tittle}} </p>
+    <div *ngIf="!isLogged">
+      <input type="text" name="username" placeholder="Введите логин" [(ngModel)]="login">
+      <br>
+      <input type="password" name="password" placeholder="Введите пароль" [(ngModel)]="password">
+      <br>
+      <button (click)="LogIn()" [disabled]="ButtonCheck()">Войти</button>
+    </div>
+    <div *ngIf="isLogged">
+      <button (click)="LogOut()" style="float: none">Выйти</button>
+    </div>
+  </form>
+</div>

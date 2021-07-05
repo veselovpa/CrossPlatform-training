@@ -1,0 +1,35 @@
+.menu {
+  padding: 0;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul a {
+  text-decoration: none;
+}
+
+.block {
+  display: inline-flex;
+  padding: 15px 45px 15px 30px;
+  font-size: 18px;
+  color: #363636;
+  background-color: #e0e0e0;
+  border-left: solid 2px #363636;
+}
+
+.block:hover {
+  background-color: #363636;
+  color: white;
+  border-color: white;
+}
+
+.material-icons {
+  margin-right: 5px
+}

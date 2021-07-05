@@ -1,0 +1,40 @@
+.auth {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth form {
+  text-align: center;
+  font-size: 25px;
+}
+
+.auth form input {
+  width: 500px;
+  height: 50px;
+  margin: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.auth form input:focus {
+  background-color: #f6f6f6;
+}
+
+.auth form button {
+  float: right;
+  margin: 10px 10px 0 0;
+  height: 50px;
+  width: 120px;
+  border-radius: 5px;
+  color: white;
+  background-color: #5d6679;
+  font-size: 16px;
+  border: none;
+}
+
+.auth form button:hover {
+  background-color: #717d9a;
+}
+

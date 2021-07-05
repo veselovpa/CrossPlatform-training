@@ -1,0 +1,17 @@
+<div class="search">
+  <input type="text" name="username" placeholder="Введите что-то для поиска:" [(ngModel)]="searchInput">
+  <br><br>
+  <div class="item" *ngFor="let i of FindCompanies()">
+    <p> Компания </p>
+    {{i.name}}
+    <br>
+    <span style="font-size: 18px"> Число работников: {{i.workers.length}} </span>
+  </div>
+  <br><br>
+  <div class="item" *ngFor="let i of FindWorkers()" style="background-color: #c9d3e8">
+    <p> Работник компании {{i.company}} </p>
+    {{i.worker.name}}
+    <br>
+    <span style="font-size: 18px"> Опыт работы: {{i.worker.yearsExperience}} </span>
+  </div>
+</div>

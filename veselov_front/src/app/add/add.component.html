@@ -1,0 +1,26 @@
+<div class="add">
+  <div class="toggles">
+    <span (click)="ToggleCompany()" id="toggle-company"> Добавить компанию </span>
+    <span (click)="ToggleWorker()" id="toggle-worker"> Добавить работника </span>
+  </div>
+
+  <div *ngIf="companyView" class="add-space">
+    <span>
+      <input type="text" name="username" placeholder="Введите название компании" [(ngModel)]="nameInput">
+    </span>
+  </div>
+
+  <div *ngIf="!companyView" class="add-space">
+    <span>
+      <input type="text" name="username" placeholder="Введите имя работника" [(ngModel)]="nameInput">
+    </span>
+    <span>
+      <select [(ngModel)]="select">
+        <option *ngFor="let i of companiesList" [value]="i.id"> {{i.name}} </option>
+      </select>
+      <input type="text" name="username" placeholder="Введите опыт работы" [(ngModel)]="yearInput">
+    </span>
+  </div>
+
+  <button (click)="AddElement()">Добавить</button>
+</div>
